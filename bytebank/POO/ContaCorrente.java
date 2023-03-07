@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.POO;
 
 public class ContaCorrente extends Conta implements Tributavel {
 
@@ -15,6 +15,11 @@ public class ContaCorrente extends Conta implements Tributavel {
   @Override
   public double getValorImposto() {
     return super.getSaldo() * 0.01;
+  }
+
+  @Override
+  public String toString() {
+    return "Conta Corrente, \n" + super.toString();
   }
 
 }

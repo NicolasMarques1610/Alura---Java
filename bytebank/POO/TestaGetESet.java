@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.POO;
 
 public class TestaGetESet {
   public static void main(String args[]) {

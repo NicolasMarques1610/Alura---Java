@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.POO;
 
 public abstract class Conta {
   private double saldo;
@@ -84,7 +84,8 @@ public abstract class Conta {
 
   @Override
   public String toString() {
-    return "Agência: " + getAgencia() + "\nNúmero: " + getNumero() + "\nSaldo: " + getSaldo() + "\nTitular: "
-        + getTitular().getNome();
+    return "Agência: " + getAgencia() + "\nNúmero: " + getNumero() + "\nSaldo: "
+        + getSaldo(); // + "\nTitular: "
+    // + getTitular().getNome();
   }
 }

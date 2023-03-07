@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.POO;
 
 public class Cliente {
   private String nome;

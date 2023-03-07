@@ -1,4 +1,4 @@
-package bytebank;
+package bytebank.POO;
 
 public class TestaMetodo {
   public static void main(String argts[]) {
