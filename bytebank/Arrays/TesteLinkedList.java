@@ -1,21 +1,17 @@
 package bytebank.Arrays;
 
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
-import java.util.Vector;
 
 import bytebank.POO.*;
 
-public class TesteArrayList {
+public class TesteLinkedList {
   public static void main(String[] args) {
     // coloca o <Conta> para dizer que esse ArrayList é do tipo Conta e so guarda
     // esse tipo de objeto, Generics é nome <>
-    // List<Conta> lista = new Vector<Conta>();// Vector thread safe
-    // Collection<Conta> lista = new ArrayList<Conta>();//Collection é uma interface
-    // que as List implementam, List tb eh interface
     List<Conta> lista = new ArrayList<Conta>();
-
+    List<String> nomes = new LinkedList<String>();
     Conta cc = new ContaCorrente(22, 11);
     lista.add(cc);
 

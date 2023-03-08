@@ -1,6 +1,7 @@
 package bytebank.POO;
 
-public abstract class Conta {
+public abstract class Conta extends Object implements Comparable<Conta> { // Comparable usado para ordenção de ordem
+                                                                          // natural
   private double saldo;
   private int agencia;
   private int numero;
@@ -80,6 +81,22 @@ public abstract class Conta {
       return true;
     }
     return false;
+  }
+
+  @Override
+  public boolean equals(Object ref) {
+    Conta conta = (Conta) ref;
+    if (this.agencia != conta.agencia)
+      return false;
+    if (this.numero != conta.numero)
+      return false;
+    return true;
+  }
+
+  // ordenação de ordem natural que é usada no teste1 de arrays
+  @Override
+  public int compareTo(Conta conta) {
+    return Double.compare(this.saldo, conta.saldo);
   }
 
   @Override
