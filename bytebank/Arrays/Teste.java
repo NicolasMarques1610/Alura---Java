@@ -1,8 +1,6 @@
 package bytebank.Arrays;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import bytebank.POO.*;
 
@@ -50,10 +48,26 @@ public class Teste {
     List<Object> lista2 = new ArrayList<>();
     lista2.add(Integer.valueOf(10));
 
+    List<Integer> lista3 = new ArrayList<>();
+    lista3.add(10);
+    lista3.add(1);
+    lista3.add(0);
+    lista3.add(11);
+    lista3.add(9);
+
+    lista3.sort((valor, valor2) -> Integer.compare(valor, valor2));
+
+    lista3.forEach(v -> {
+      if(v == 0) {
+        System.out.println("Neutro: " + v);
+      } else if(v % 2 == 0) { 
+        System.out.println("Par: " + v);
+      } else System.out.println("Ímpar: " + v);
+    });
+
     // Ordenação de números de um array
     int[] val5 = { 44, 33, 98, 2, 10, 1, 34 };
     Arrays.sort(val5);
-
     System.out.println(Arrays.toString(val5));
   }
 }
