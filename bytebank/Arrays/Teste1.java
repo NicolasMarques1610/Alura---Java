@@ -1,8 +1,6 @@
 package bytebank.Arrays;
 
 import java.util.ArrayList;
-import java.util.Collections;
-//usado para o método sort
 import java.util.Comparator;
 import java.util.List;
 
@@ -41,61 +39,25 @@ public class Teste1 {
     lista.add(cc3);
     lista.add(cc4);
 
-    for (Conta conta : lista) {
-      System.out.println(conta);
-    }
+    // classe anonima
+    lista.sort(new Comparator<Conta>() {
+      @Override
+      public int compare(Conta c1, Conta c2) {
+        return Integer.compare(c1.getNumero(), c2.getNumero());
+      }
+    });
 
-    // ComparadorNumeroConta comparar = new ComparadorNumeroConta();
-
-    // ordenação, se substituirmos por null é usado a ordem natural feita na classe
-    // Conta
-    lista.sort(new ComparadorTitularConta());
-
-    // outra forma de ordenar
-    Collections.sort(lista, new ComparadorNumeroConta());
-
-    // embaralha a lista
-    // Collections.shuffle(lista);
-
-    // se a lista é do menor pro maior, inverte do maior para o menor
-    // Collections.reverse(lista);
-
-    // ordenação de ordem natural
-    // Collections.sort(lista);
-
-    System.out.println("------------------");
+    Comparator<Conta> comp = new Comparator<Conta>() {
+      @Override
+      public int compare(Conta c1, Conta c2) {
+        String nomeC1 = c1.getTitular().getNome();
+        String nomeC2 = c2.getTitular().getNome();
+        return nomeC1.compareTo(nomeC2);
+      }
+    };
 
     for (Conta conta : lista) {
       System.out.println(conta + ", " + conta.getTitular().getNome());
     }
   }
-}
-
-class ComparadorTitularConta implements Comparator<Conta> {
-
-  @Override
-  public int compare(Conta c1, Conta c2) {
-    String nomeC1 = c1.getTitular().getNome();
-    String nomeC2 = c2.getTitular().getNome();
-    return nomeC1.compareTo(nomeC2);
-  }
-
-}
-
-// classe de comparação editada a partir da interface comparator
-class ComparadorNumeroConta implements Comparator<Conta> {
-
-  @Override
-  public int compare(Conta c1, Conta c2) {
-    return Integer.compare(c1.getNumero(), c2.getNumero());
-    // return c1.getNumero() - c2.getNumero(); // segunda forma
-    // if (c1.getNumero() < c2.getNumero()) {
-    // return -1;
-    // }
-    // if (c1.getNumero() > c2.getNumero()) {
-    // return 1;
-    // }
-    // return 0;
-  }
-
 }
