@@ -1,0 +1,5 @@
+Como já havíamos mostrado no começo de nosso guia, se buscarmos a explicação 
+mais simples para esse tema, podemos entender que tanto o loop for quanto o 
+ForEach loop têm a mesma funcionalidade — eles são responsáveis por iterar os 
+elementos em dada coleção, como os ArrayLists, que abordamos durante nossos 
+exemplos.
