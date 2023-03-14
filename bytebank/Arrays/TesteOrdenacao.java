@@ -21,7 +21,7 @@ public class TesteOrdenacao {
     Cliente clienteCC2 = new Cliente();
     clienteCC2.setNome("Guilherme");
     cc2.setTitular(clienteCC2);
-    cc2.deposita(444.0);
+    cc2.deposita(144.0);
 
     Conta cc3 = new ContaCorrente(22, 11);
     Cliente clienteCC3 = new Cliente();
@@ -62,7 +62,7 @@ public class TesteOrdenacao {
     // Collections.reverse(lista);
 
     // ordenação de ordem natural
-    // Collections.sort(lista);
+    //Collections.sort(lista);
 
     System.out.println("------------------");
 
